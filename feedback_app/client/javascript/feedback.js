@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import {Questions} from '/models/questions.js';
 
-
 Template.feedback.helpers({
   myTitle:function() {
     return "Feedback App";
@@ -16,9 +15,7 @@ Template.feedback.helpers({
 });
 
 Template.feedback.onCreated(function() {
-
   Meteor.subscribe('getQuestions');
-
 });
 
 Template.feedback.events({
@@ -32,7 +29,5 @@ Template.feedback.events({
         $('#feedbackForm').trigger('reset');
       }
     });
-
-
   },
 });
